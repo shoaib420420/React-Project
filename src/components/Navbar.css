@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+.logo {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Hamburger Menu - ALWAYS VISIBLE */
+.menue-bar {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Links Drawer - ALWAYS OFF-CANVAS hidden by default */
+.links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* Full screen overlay as per original design */
+    height: 100vh;
+    background: rgb(174, 197, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 999;
+}
+
+/* Active State - When Menu is Open */
+.links.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Link Styles inside Drawer */
+.links a {
+    color: black;
+    text-decoration: none !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: blue;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.links a:hover {
+    transform: scale(1.1);
+    color: blue;
+}
+
+/* Close Button inside Drawer */
+.close-driver {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    color: black;
+}
+
+.close-driver:hover {
+    color: blue;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menue-bar {
+        font-size: 1.5rem;
+    }
+
+    .close-driver {
+        top: 20px;
+        right: 20px;
+    }
+
+    .links a {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* .menue-bar {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: blue;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.links a:hover::after{
+    width: 100%;
+    left: 0;
+}
+.links a:hover{
+    transform: scale(1.1);
+}
+.menue-bar{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    
+}
+.close-driver{
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    display: none;
+
+}
+.close-driver:hover{
+    color: blue;
+}
+@media(max-width:768px){
+    .links{
+        margin: 0;
+    }
+    .close-driver{
+        display: block;
+    }
+    .links{
+        position: fixed;
+        padding-top: 40%;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgb(174, 197, 240);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        z-index: 999;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+    }
+    .links li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none !important;
+    }
+    .links.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .menue-bar{
+        display: block;
+    }
+    
+} */

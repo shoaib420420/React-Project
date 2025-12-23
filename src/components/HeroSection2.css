@@ -1,0 +1,73 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Ensure all images have proper sizing and styling */
+.container img {
+  border: 2px solid black;
+  object-fit: cover;
+  display: block;          /* Required to center with margin auto */
+  margin: 0 auto;          /* Horizontally center */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optional: Control the height if needed */
+.col-md-6 {
+  height: auto;
+}
+
+.col-md-6 p {
+  padding-left: 10px;
+}
+
+/* Tablet & below */
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .container p {
+    text-align: center;
+  }
+
+  .container video {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container img {
+    max-height: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .container p {
+    text-align: center;
+  }
+
+  .container video {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .container img {
+    max-height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+}
