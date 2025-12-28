@@ -1,12 +1,82 @@
-# React + Vite
+# React Hotel Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive hotel website built with React and Vite. This application provides a user-friendly interface for exploring hotel services, rooms, galleries, and news.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Multi-Page Navigation**: Seamless routing using `react-router-dom`.
+- **Pages**:
+  - **Home**: Landing page with hero section and highlights.
+  - **About**: Information about the hotel and its history.
+  - **Contacts**: Contact information and location.
+  - **Hotel**: Details about hotel amenities and rooms.
+  - **Gallery**: Visual showcase of the hotel premises.
+  - **News**: Latest updates and articles.
+- **Responsive Design**: Styled with Bootstrap 5 and custom CSS for optimal viewing on all devices.
+- **Iconography**: Integrated with FontAwesome and Bootstrap Icons.
 
-## Expanding the ESLint configuration
+## 🛠️ Technology Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: [React](https://react.dev/) (v19)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: 
+  - [Bootstrap 5](https://getbootstrap.com/)
+  - Custom CSS
+- **Routing**: [React Router](https://reactrouter.com/) (v7)
+- **Icons**: 
+  - [FontAwesome](https://fontawesome.com/)
+  - [Bootstrap Icons](https://icons.getbootstrap.com/)
+  - React Icons
+- **Sliders**: `react-simple-image-slider`, `react-slideshow-image`
+
+## 📂 Project Structure
+
+```
+first-practice/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components (Navbar, Footer, etc.)
+│   ├── pages/           # Page components (Home, About, etc.)
+│   ├── images/          # Image assets
+│   ├── App.jsx          # Main application component with routes
+│   ├── main.jsx         # Entry point
+│   └── ...
+├── package.json         # Project dependencies and scripts
+└── ...
+```
+
+## 📦 Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd first-practice
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+## 🏃 Usage
+
+-   **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The app will typically be available at `http://localhost:5173`.
+
+-   **Build for production:**
+    ```bash
+    npm run build
+    ```
+
+-   **Preview production build:**
+    ```bash
+    npm run preview
+    ```
+
+-   **Run linter:**
+    ```bash
+    npm run lint
+    ```
