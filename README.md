@@ -1,6 +1,6 @@
 # React Hotel Website
 
-A modern, responsive hotel website built with React and Vite. This application provides a user-friendly interface for exploring hotel services, rooms, galleries, and news.
+A modern, responsive hotel website built with React and Vite. This application provides a user-friendly interface for exploring hotel services, rooms, galleries, and news. You can check project in video through this link: https://drive.google.com/file/d/11OcACRX0JsVfNllPyDZrzIKvyqCdZ18H/view?usp=sharing
 
 ## 🚀 Features
 
